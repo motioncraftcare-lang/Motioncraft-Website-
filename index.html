@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Motioncraft.ia</title>
+    <meta name="description" content="Motioncraft is a creative AI content agency crafting cinematic designs, motion, and experiences with intelligent automation." />
+    <meta name="keywords" content="Motioncraft, AI agency, creative AI, motion design, generative design, video, branding" />
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="Motioncraft — AI Creative Content Agency" />
+    <meta property="og:description" content="Crafting Intelligent Motion Through AI Creativity." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://motioncraft.example.com" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1527443224154-c4f2a9b1d593?auto=format&fit=crop&w=1200&q=60" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Fixed Navigation -->
+    <header class="site-header" id="top">
+      <nav class="nav">
+        <a href="#hero" class="logo" aria-label="Motioncraft home">Motioncraft</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#statement">Motive</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Support</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Background Canvas for Particles / Waves -->
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- Hero Section -->
+    <!--
+      How to customize the logo in the hero:
+      - Option A (Text): Edit the anchor with class "logo" in the header and the
+        <span class="brand-glow">Motioncraft</span> inside the <h1> below.
+      - Option B (Image): Replace the anchor text with an <img src="/path/to/logo.svg" alt="Motioncraft" />
+        and optionally keep the text visually hidden for accessibility.
+      - Tip: The logo hover underline and gradient are controlled via .logo and .brand-glow in style.css.
+    -->
+    <main>
+      <section id="hero" class="section hero">
+        <div class="hero__content">
+          <h1 class="brand-title">
+            <span class="brand-glow">Motioncraft</span>
+          </h1>
+          <p class="tagline">SOMETHING BIG!</p>
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="#showcase">Explore Work</a>
+            <a class="btn btn-ghost" href="#contact">Get Support</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Motion Statement Section -->
+      <section id="statement" class="section statement reveal">
+        <div class="container">
+          <h2 class="section-title">Our Motion Statement</h2>
+          <p class="lead">
+            At Motioncraft, we are motivated to build something meaningful that helps your business scale, we envision to stand apart by transcending the limits of creative workflows by using ever evolving technologies. Our relentlessness towards chasing our dreams is not skewed towards finding perfectionism but creating visuals that have a will of their own. We believe in our ability to be persistent and consistent in making our way through the hardships of entrepreneurship. We dream to build an AI workflow that minimises the hallucination demerit of AI.
+          </p>
+            </div>
+      </section>
+
+      <!-- Showcase Section -->
+      <section id="showcase" class="section showcase">
+        <div class="container">
+          <h2 class="section-title">Showcase</h2>
+          <div class="grid">
+            <!-- Project Card 1 -->
+            <article class="card reveal" aria-label="Project 1">
+              <div class="media media--video">
+                <video src="Something_Big_Vid.mp4" muted loop playsinline preload="metadata"></video>
+                <button class="video-toggle" aria-label="Play/Pause">▶</button>
+                <button class="open-project-btn" onclick="openProject('Something_Big_Vid.mp4')">Open it</button>
+              </div>
+              <div class="card__overlay">
+                <h3>Something-Big</h3>
+                <p>RAX encounters something BIG?.</p>
+              </div>
+            </article>
+
+            <!-- Project Card 2 (Video) -->
+            <article class="card reveal" aria-label="Project 2">
+              <div class="media media--video">
+                <video src="Christian_Louboutin.mp4" muted loop playsinline preload="metadata"></video>
+                <button class="video-toggle" aria-label="Play/Pause">▶</button>
+                <button class="open-project-btn" onclick="openProject('Christian_Louboutin.mp4')">Open it</button>
+              </div>
+              <div class="card__overlay">
+                <h3>The Christian Loubouton Project</h3>
+                <p>Dream what you want</p>
+              </div>
+            </article>
+
+            <!-- Project Card 3 -->
+            <article class="card reveal" aria-label="Project 2">
+              <div class="media media--video">
+                <video src="Sample_edit.mp4" muted loop playsinline preload="metadata"></video>
+                <button class="video-toggle" aria-label="Play/Pause">▶</button>
+                <button class="open-project-btn" onclick="openProject('Sample_edit.mp4')">Open it</button>
+              </div>
+              <div class="card__overlay">
+                <h3>Sample Edit</h3>
+                <p>Consistancy you say?</p>
+              </div>
+            </article>
+
+            <!-- Project Card 4 (Video) -->
+            <article class="card reveal" aria-label="Project 4">
+              <div class="media media--video">
+                <video src="Ralph Lauren.mp4" muted loop playsinline preload="metadata"></video>
+                <button class="video-toggle" aria-label="Play/Pause">▶</button>
+                <button class="open-project-btn" onclick="openProject('Ralph Lauren.mp4')">Open it</button>
+              </div>
+              <div class="card__overlay">
+                <h3>Elegant</h3>
+                <p>Class of it's own </p>
+              </div>
+            </article>
+
+            <!-- Project Card 5 -->
+            <article class="card reveal" aria-label="Project 4">
+              <div class="media media--video">
+                <video src="Nike_ad.mp4" muted loop playsinline preload="metadata"></video>
+                <button class="video-toggle" aria-label="Play/Pause">▶</button>
+                <button class="open-project-btn" onclick="openProject('Nike_ad.mp4')">Open it</button>
+              </div>
+              <div class="card__overlay">
+                <h3>The Nike AD</h3>
+                <p>Beware of the snake you might get petrified </p>
+              </div>
+            </article>
+
+            <!-- Project Card 6 (Video) -->
+            <article class="card reveal" aria-label="Project 6">
+              <div class="media media--video">
+                <video src="Purse_edit.mp4" muted loop playsinline preload="metadata"></video>
+                <button class="video-toggle" aria-label="Play/Pause">▶</button>
+                <button class="open-project-btn" onclick="openProject('Purse_edit.mp4')">Open it</button>
+              </div>
+              <div class="card__overlay">
+                <h3>'PRODUCT'ive</h3>
+                <p>Limitless capabilities</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="section about reveal">
+        <div class="container">
+          <h2 class="section-title">About Us</h2>
+          <p class="lead">
+             We are team of people who keep chasing when everyone else have lost hope. We are the team of individuals who have tasted defeat so many times that we have found the right ways to win.  Together we want to build something big for you, something that can get you out of those hassles, pain and suffering and the feeling of despair. We do not have just big words we have something big coming for you.
+          </p>
+        </div>
+      </section>
+
+      <!-- Support / Contact Section -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2 class="section-title">Support</h2>
+          <p class="lead">Have a project or need assistance? Send us a message.</p>
+
+          <form id="support-form" class="form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your goals" ></textarea>
+            </div>
+            <div class="form-actions">
+              <button id="submitBtn" type="submit" class="btn btn-primary">Send Message</button>
+              <span id="form-status" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+
+          <!--
+            Google Sheets Integration (via Google Apps Script)
+            --------------------------------------------------
+            1) Create a Google Sheet with columns: timestamp, name, email, message
+            2) Extensions → Apps Script → New project. Paste a doPost handler:
+
+            function doPost(e) {
+              const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Sheet1');
+              const data = JSON.parse(e.postData.contents);
+              sheet.appendRow([new Date(), data.name, data.email, data.message]);
+              return ContentService
+                .createTextOutput(JSON.stringify({ ok: true }))
+                .setMimeType(ContentService.MimeType.JSON)
+                .setHeader('Access-Control-Allow-Origin', '*');
+            }
+
+            3) Deploy → New deployment → type: Web app
+               - Execute as: Me
+               - Who has access: Anyone
+            4) Copy the Web app URL and replace GAS_ENDPOINT in script.js
+          -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Motioncraft. All rights reserved.</p>
+        <p>Contact: <a href="mailto:motioncraft.care@gmail.com">motioncraft.care@gmail.com</a></p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
